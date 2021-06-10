@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap');
+
+
+.ucontainer{
+    background-color: rgb(224, 223, 223);
+    margin-bottom: 30px;
+    .uinput
+    {
+        border: none;
+        background: none;
+        border-bottom: 1px solid black;
+    }
+    h1{
+        font-family: 'Playfair Display';
+    }
+}
