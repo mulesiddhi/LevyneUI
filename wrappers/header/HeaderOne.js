@@ -4,6 +4,7 @@ import IconGroup from "../../components/header/IconGroup";
 import MobileMenu from "../../components/header/MobileMenu";
 import NavMenu from "../../components/header/NavMenu";
 import PropTypes from "prop-types";
+
 const HeaderOne = ({
 	layout,
 	headerPaddingClass,
@@ -40,15 +41,6 @@ const HeaderOne = ({
 				<div className={scrollState==="top" ?'navbarblur':'acnavbar'}>
 				<div className={layout === "container-fluid" ? layout : "container"}>
 					<div className="row">
-						{/* <div className="col-xl-2 col-lg-2 col-md-6 col-4"> */}
-							{/* header logo */}
-							{/* <div className="logo">
-								<a href="/">
-									<img className="img-fluid" alt="" src={ProfileImage} />
-									<span>{BrandName}</span>
-								</a>
-							</div> */}
-						{/* </div> */}
 						<div className="col-xl-3 col-lg-3 d-none d-lg-block">
 							{/* Nav menu */}
 							<NavMenu />

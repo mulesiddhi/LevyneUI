@@ -2,7 +2,7 @@ import React from 'react'
 
 const StayUpdate = () => {
     return (
-      <div className='container  p-5 ucontainer'>
+      <div className='container   ucontainer mb-30 mt-30 '>
                         <div className='box'>
                 <h1 className='m-3 mb-10'>Stay Updated With Us</h1>
                 <form className='mb-10 m-3'>

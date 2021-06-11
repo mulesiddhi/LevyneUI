@@ -1,7 +1,7 @@
 import BannerEightSingle from "../../components/banner/BannerEightSingle.js";
 import React from "react";
 
-const BannerEight = ({Images}) => {
+const BannerEight = () => {
   
   return (
     <div className="container pt-4 pr-0 pl-0">
