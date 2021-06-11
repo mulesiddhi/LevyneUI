@@ -4,11 +4,11 @@ import React from "react";
 const BannerEight = ({Images}) => {
   
   return (
-    <div className="container pt-4">
+    <div className="container pt-4 pr-0 pl-0">
       <div className="row">
         <div className='col-lg mb-4'
         style={{
-          height:400
+          height: 400
         }}>
         <BannerEightSingle
           data={{
