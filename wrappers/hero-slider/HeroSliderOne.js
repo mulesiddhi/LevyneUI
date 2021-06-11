@@ -1,5 +1,6 @@
 import HeroSliderOneSingle from "../../components/hero-slider/HeroSliderOneSingle.js";
 import React from "react";
+
 import heroSliderData from "../../data/hero-sliders/hero-slider-one.json";
 
 const HeroSliderOne = () => {
@@ -42,6 +43,7 @@ const HeroSliderOne = () => {
               />
             );
           })}
+          
       
     </div>
   </div>

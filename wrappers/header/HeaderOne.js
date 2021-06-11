@@ -4,74 +4,74 @@ import IconGroup from "../../components/header/IconGroup";
 import MobileMenu from "../../components/header/MobileMenu";
 import NavMenu from "../../components/header/NavMenu";
 import PropTypes from "prop-types";
-
 const HeaderOne = ({
-  layout,
-  top,
-  borderStyle,
-  headerPaddingClass,
-  headerBgClass
+	layout,
+	headerPaddingClass,
+	headerBgClass,
+	ProfileImage,
+	BrandName
 }) => {
-  const [scroll, setScroll] = useState(0);
-  const [headerTop, setHeaderTop] = useState(0);
+
+	let listener = null
+  const [scrollState, setScrollState] = useState("top")
 
   useEffect(() => {
-    const header = document.querySelector(".sticky-bar");
-    setHeaderTop(header.offsetTop);
-    window.addEventListener("scroll", handleScroll);
+    listener = document.addEventListener("scroll", e => {
+      var scrolled = document.scrollingElement.scrollTop
+      if (scrolled >= 120) {
+        if (scrollState !== "bottom") {
+          setScrollState("bottom")
+        }
+      } else {
+        if (scrollState !== "top") {
+          setScrollState("top")
+        }
+      }
+    })
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      document.removeEventListener("scroll", listener)
+    }
+  }, [scrollState])
 
-  const handleScroll = () => {
-    setScroll(window.scrollY);
-  };
 
-  return (
-    <header
-      className={`header-area clearfix ${headerBgClass ? headerBgClass : ""}`}
-    >
-      <div
-        className={`${headerPaddingClass ? headerPaddingClass : ""} ${
-          top === "visible" ? "d-none d-lg-block" : "d-none"
-        } header-top-area ${
-          borderStyle === "fluid-border" ? "border-none" : ""
-        }`}
-      >
-      </div>
-
-      <div
-        className={` ${
-          headerPaddingClass ? headerPaddingClass : ""
-        } sticky-bar header-res-padding clearfix ${
-          scroll > headerTop ? "stick" : ""
-        }`}
-      >
-        <div className={layout === "container-fluid" ? layout : "container"}>
-          <div className="row">
-            <div className="col-xl-8 col-lg-8 d-none d-lg-block">
-              {/* Nav menu */}
-              <NavMenu />
-            </div>
-            <div className="col-xl-2 col-lg-2 col-md-6 col-8">
-              {/* Icon group */}
-              <IconGroup />
-            </div>
-          </div>
-        </div>
-        {/* mobile menu */}
-        <MobileMenu />
-      </div>
-    </header>
-  );
+	return (
+		<header className={`header-area clearfix ${headerBgClass ? headerBgClass : ""}`}>
+			<div className={`${headerPaddingClass ? headerPaddingClass : ""} sticky-bar stick header-res-padding clearfix `}>
+				<div className={scrollState==="top" ?'navbarblur':'acnavbar'}>
+				<div className={layout === "container-fluid" ? layout : "container"}>
+					<div className="row">
+						{/* <div className="col-xl-2 col-lg-2 col-md-6 col-4"> */}
+							{/* header logo */}
+							{/* <div className="logo">
+								<a href="/">
+									<img className="img-fluid" alt="" src={ProfileImage} />
+									<span>{BrandName}</span>
+								</a>
+							</div> */}
+						{/* </div> */}
+						<div className="col-xl-3 col-lg-3 d-none d-lg-block">
+							{/* Nav menu */}
+							<NavMenu />
+						</div>
+						<div className="col-xl-8 col-lg-8 col-md-12 col-12">
+							{/* Icon group */}
+							<IconGroup />
+						</div>
+					</div>
+				</div>
+				{/* mobile menu */}
+				<MobileMenu />
+			</div>
+			</div>
+		</header>
+	);
 };
 
 HeaderOne.propTypes = {
-  borderStyle: PropTypes.string,
-  headerPaddingClass: PropTypes.string,
-  layout: PropTypes.string,
-  top: PropTypes.string
+	borderStyle: PropTypes.string,
+	headerPaddingClass: PropTypes.string,
+	layout: PropTypes.string,
+	top: PropTypes.string
 };
 
 export default HeaderOne;

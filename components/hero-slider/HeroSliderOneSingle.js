@@ -1,13 +1,16 @@
 import PropTypes from "prop-types";
 import React from "react";
+import VideoComponent from '../../components/video&poweredby/VideoComponent';
 
 const HeroSliderOneSingle = ({ data, sliderClassName }) => {
   return (
     <div
-      className={`single-slider slider-height-1 bg-purple ${
-        sliderClassName ? sliderClassName : ""
-      }`}
+      className={`single-slider slider-height-1 bg-purple ${sliderClassName ? sliderClassName : ""
+        }`}
     >
+      <div className='bottom-right fixed'>
+        <VideoComponent />
+      </div>
       <div className="container">
         <div className="row">
           <div className="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
@@ -30,7 +33,9 @@ const HeroSliderOneSingle = ({ data, sliderClassName }) => {
         </div>
       </div>
     </div>
+
   );
+
 };
 
 HeroSliderOneSingle.propTypes = {
