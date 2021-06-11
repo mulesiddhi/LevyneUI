@@ -1,7 +1,6 @@
 import HeroSliderOneSingle from "../../components/hero-slider/HeroSliderOneSingle.js";
 import React from "react";
 import heroSliderData from "../../data/hero-sliders/hero-slider-one.json";
-import styles from '../../styles/HeroSliderOne.module.scss';
 
 const HeroSliderOne = () => {
   const params = {
@@ -30,22 +29,22 @@ const HeroSliderOne = () => {
   };
 
   return (
-    <div styleName={styles.sliderarea}>
-      <div className={`${slider-active} ${nav-style-1}`}>
-        
-          {heroSliderData &&
-            heroSliderData.map((single, key) => {
-              return (
-                <HeroSliderOneSingle
-                  sliderClassName="swiper-slide"
-                  data={single}
-                  key={key}
-                />
-              );
-            })}
-        
-      </div>
+    <div className="slider-area">
+    <div className="slider-active nav-style-1">
+      
+        {heroSliderData &&
+          heroSliderData.map((single, key) => {
+            return (
+              <HeroSliderOneSingle
+                sliderClassName="swiper-slide"
+                data={single}
+                key={key}
+              />
+            );
+          })}
+      
     </div>
+  </div>
   );
 };
 

@@ -1,5 +1,4 @@
 /*----- 3. Slider style  ------*/
-@import "variables";
 
 .slider-height-1 {
     height: 750px;
@@ -353,7 +352,7 @@
         }
     }
 }
-.sliderarea {
+.slider-area {
     &:hover .nav-style-1 .ht-swiper-button-nav {
         opacity: 1;
         visibility: visible;
