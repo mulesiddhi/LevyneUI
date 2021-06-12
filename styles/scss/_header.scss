@@ -10,6 +10,17 @@
 	animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
 	// background-co/----- 2. Header style ----/
     // background: blur 0;
+    @media #{$sm-layout}{
+        
+  }
+  @media #{$xl-layout}{
+   
+}
+@media #{$lg-layout}{
+}
+@media #{$md-layout}{
+    
+}
 
 .header-area {
     position: relative;

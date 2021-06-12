@@ -25,15 +25,17 @@
     }
   }
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap');
 .footer-widget {
   .footer-title {
     h3 {
-      font-size: 16px;
+      font-size: 25px;
       font-weight: 500;
-      color: #313131;
+      color: #fff;
       margin: 0 0 16px;
       line-height: 1;
+      font-family: 'Playfair Display';
     }
   }
   .footer-list {
@@ -44,8 +46,10 @@
           margin: 0 0 0px;
         }
         a {
-          color: #5d5d5d;
+          font-size: 16px;
+          color: #fff;
           letter-spacing: 0.3px;
+          font-family: 'Mulish';
           &:hover {
             color: $theme-color;
           }

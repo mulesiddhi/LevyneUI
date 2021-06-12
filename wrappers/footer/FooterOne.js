@@ -44,6 +44,10 @@ const FooterOne = ({
         className={`footer-area ${backgroundColorClass ? backgroundColorClass : ""
           } ${spaceTopClass ? spaceTopClass : ""} ${spaceBottomClass ? spaceBottomClass : ""
           } ${extraFooterClass ? extraFooterClass : ""}`}
+          style={{
+            backgroundImage: `url('https://th.bing.com/th/id/OIP.05A3hbX1Gjy_zCARyTZCGgHaE7?w=250&h=180&c=7&o=5&dpr=1.5&pid=1.7')`,
+            backgroundSize: 'cover'
+          }}
       >
         <div className={`${containerClass ? containerClass : "container"}`}>
           <div className="row">
@@ -78,7 +82,7 @@ const FooterOne = ({
             </div> */}
 
             <div className={`${sideMenu ? "col-xl-2 col-sm-4" : "col-lg-2 col-sm-4"}`}>
-              <div className="footer-widget mb-30 ml-30">
+              <div className="footer-widget mb-30 ml-30 ">
                 <div className="footer-title">
                   <h3>ABOUT US</h3>
                 </div>

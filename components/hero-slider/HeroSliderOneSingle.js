@@ -6,9 +6,14 @@ const HeroSliderOneSingle = ({ data, sliderClassName }) => {
   return (
     <div className='herocontainer'>
     <div
-      className={`single-slider slider-height-1 bg-purple ${sliderClassName ? sliderClassName : ""
+      className={`single-slider slider-height-1  ${sliderClassName ? sliderClassName : ""
         }`}
+        style={{
+          backgroundImage: `url('${data.image}')`,
+          backgroundSize: 'cover'
+        }}
     >
+      {/* <img className='heroimg' src={data.image}/> */}
       <div className="container w-auto">
         <div className="row text-align-center">
           <div className="">
