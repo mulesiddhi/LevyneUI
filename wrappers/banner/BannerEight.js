@@ -6,7 +6,7 @@ const BannerEight = () => {
   return (
     <div className="container pt-4 pr-0 pl-0">
       <div className="row">
-        <div className='col-lg mb-4'
+        <div className='col-lg mb-4 pr-4 pl-4'
         style={{
           height: 400
         }}>
@@ -22,7 +22,7 @@ const BannerEight = () => {
           spaceBottomClass="mb-30"
         />
         </div>
-        <div className='col-lg mb-4' style={{
+        <div className='col-lg mb-4 pr-4 pl-4' style={{
           height:400
         }}>
         <BannerEightSingle
