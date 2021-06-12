@@ -84,7 +84,7 @@ const FooterOne = ({
             <div className={`${sideMenu ? "col-xl-2 col-sm-4" : "col-lg-2 col-sm-4"}`}>
               <div className="footer-widget mb-30 ml-30 ">
                 <div className="footer-title">
-                  <h3>ABOUT US</h3>
+                  <h3>About Us</h3>
                 </div>
                 <div className="footer-list">
                   <ul>

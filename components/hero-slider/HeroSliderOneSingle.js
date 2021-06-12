@@ -10,7 +10,7 @@ const HeroSliderOneSingle = ({ data, sliderClassName }) => {
         }`}
         style={{
           backgroundImage: `url('${data.image}')`,
-          backgroundSize: 'cover'
+          backgroundSize: 'cover',
         }}
     >
       {/* <img className='heroimg' src={data.image}/> */}
