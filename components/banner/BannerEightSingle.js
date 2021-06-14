@@ -11,7 +11,7 @@ const BannerEightSingle = ({ data, spaceBottomClass }) => {
         backgroundSize: 'cover'
       }}>
        
-          <div className="slider-content-7 p-3 m-3"
+          <div className="slider-content-7 p-3 mt-150 ml-150"
           >
             <h3>{data.title}</h3>
           </div>
