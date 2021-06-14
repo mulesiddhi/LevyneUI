@@ -1981,7 +1981,7 @@
     box-shadow: 0 0 87px 0 rgba(0, 0, 0, 0.09);
     background: rgba(0, 0, 0, 0.2);
 	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px) ;
   }
 
   .offcanvas-mobile-search-area{
@@ -1999,7 +1999,7 @@
         font-size: 16px;
         display: block;
         padding: 9px 25px;
-        color: #222;
+        color: #fff;
         background: #e6e6e6;
         border: none;
 
@@ -3007,7 +3007,7 @@ lor: #fff;
                     padding: 5px 72px 5px 15px;
                     transition: all 0.4s ease 0s;
                     width: 100%;
-                    color: #000;
+                    color: #fff;
                     background: transparent;
                 }
                 .button-search {
@@ -4233,7 +4233,7 @@ lor: #fff;
         font-size: 16px;
         display: block;
         padding: 9px 25px;
-        color: #222;
+        color: #fff;
         background: #e6e6e6;
         border: none;
 
@@ -4521,11 +4521,16 @@ backdrop-filter: blur(5px);
 }
 .hsearch{
     .fsearch{
+        input[type="text"]::placeholder {
+            color:#fff;
+            text-shadow: 0px 0px 30px rgba(0,0,0, 75%);
+          }
     .sinput{
         background:transparent;
         border: none;
         border-bottom:1px solid white;
-
+        color:#fff;
+        font-family: 'Mulish';
     }
     .sbtn{
         background: none;

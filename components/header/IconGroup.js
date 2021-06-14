@@ -1,3 +1,5 @@
+import React,{useState} from "react";
+
 import Bag from "../icons/Bag";
 import Heart from "../icons/Heart";
 import Link from "../../helpers/Link";
@@ -5,7 +7,6 @@ import Menu from '../icons/Menu'
 import MenuCart from "./sub-components/MenuCart";
 import Profile from "../icons/Profile";
 import PropTypes from "prop-types";
-import React from "react";
 import SvgComponent from "../icons/Search";
 import { useRouter } from "next/router";
 
@@ -39,7 +40,18 @@ const IconGroup = ({
       "#offcanvas-mobile-menu"
     );
     offcanvasMobileMenu.classList.add("active");
+    const offcanvaswrap=document.querySelector('.customnb');
+    offcanvaswrap.classList.remove('acnavbar');
   };
+  const [search, setSearch] = useState("close")
+  const triggerSearch=()=>{
+   if(search=='search'){
+     setSearch('close');
+   }
+   else{
+     setSearch('search');
+   }
+  }
 
   const router = useRouter();
 
@@ -73,12 +85,18 @@ const IconGroup = ({
             <SvgComponent className='icon-white'/>
             </button>
           </form>
-          <SvgComponent className='icon-white d-lg-none d-block'/>
+          <form action="/search" className={`d-lg-none  fsearch ${search=='search'?'d-flex':'d-none'}`}>
+            <input className='sinput mr-3' type="text" name="SearchKey" placeholder="Search Anything..." />
+            <button type="submit" className="sbtn">
+            <SvgComponent className='icon-white' />
+            </button>
+          </form>
+          <SvgComponent className={`icon-white d-lg-none  ${search=='search'?'d-none':'d-block'}`} onClick={() => triggerSearch()}/>
       </div>
       {!isLogged
         ?
         (
-          <div className="same-style account-setting d-none d-lg-block">
+          <div className="same-style account-setting d-none d-lg-block mt-2">
             <Link href={"/login"}
               className="account-setting-active"
               onClick={e => handleClick(e)}
@@ -89,7 +107,7 @@ const IconGroup = ({
           </div>
         ) :
         (
-          <div className="same-style account-setting d-none d-lg-block">
+          <div className="same-style account-setting d-none d-lg-block mt-2">
             <button
               className="account-setting-active"
               onClick={e => handleClick(e)}
@@ -119,7 +137,7 @@ const IconGroup = ({
       }
 
       
-      <div className="same-style header-wishlist d-none d-lg-block">
+      <div className="same-style header-wishlist d-none d-lg-block mt-2">
         <Link href={"/wishlist"}>
           <>
             {/* <i className="pe-7s-like" /> */}
@@ -131,7 +149,7 @@ const IconGroup = ({
         </Link>
       </div>
 
-      <div className="same-style cart-wrap d-none d-lg-block">
+      <div className="same-style cart-wrap d-none d-lg-block mt-2">
         <button className="icon-cart" onClick={e => handleClick(e)}>
           {/* <i className="pe-7s-shopbag" /> */}
           <Bag className='icon-white'/>

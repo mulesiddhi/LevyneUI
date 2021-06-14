@@ -43,6 +43,8 @@ const MobileMenu = () => {
       "#offcanvas-mobile-menu"
     );
     offcanvasMobileMenu.classList.remove("active");
+    const offcanvaswrap=document.querySelector('.customnb');
+    offcanvaswrap.classList.add('acnavbar');
   };
 
   return (

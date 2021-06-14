@@ -9,7 +9,7 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
         sidebarMenu
           ? "sidebar-menu"
           : `main-menu ${menuWhiteClass ? menuWhiteClass : ""}`
-      } `}
+      } mt-2`}
     >
       <nav>
         <ul>
