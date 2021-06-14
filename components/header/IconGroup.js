@@ -1,6 +1,7 @@
 import Bag from "../icons/Bag";
 import Heart from "../icons/Heart";
 import Link from "../../helpers/Link";
+import Menu from '../icons/Menu'
 import MenuCart from "./sub-components/MenuCart";
 import Profile from "../icons/Profile";
 import PropTypes from "prop-types";
@@ -53,7 +54,16 @@ const IconGroup = ({
     <div
       className={`header-right-wrap ${iconWhiteClass ? iconWhiteClass : ""}`}
     >
-      <div className="same-style header-search d-none d-lg-block">
+       <div className="same-style mobile-off-canvas d-block d-lg-none">
+        <button
+          className="mobile-aside-button"
+          onClick={() => triggerMobileMenu()}
+        >
+          {/* <i className="pe-7s-menu" /> */}
+          <Menu className='icon-white'/>
+        </button>
+      </div>
+      <div className="same-style header-search ">
         <button className="search-active" onClick={e => handleClick(e)}>
           {/* <i className="pe-7s-search" /> */}
           <SvgComponent className='icon-white'/>
@@ -111,7 +121,7 @@ const IconGroup = ({
       }
 
       
-      <div className="same-style header-wishlist">
+      <div className="same-style header-wishlist d-none d-lg-block">
         <Link href={"/wishlist"}>
           <>
             {/* <i className="pe-7s-like" /> */}
@@ -138,7 +148,7 @@ const IconGroup = ({
         />
 
       </div>
-      <div className="same-style cart-wrap d-block d-lg-none">
+      <div className="same-style cart-wrap  d-none">
         <Link className="icon-cart" href={"/cart"}>
           <>
             {/* <i className="pe-7s-shopbag" /> */}
@@ -148,14 +158,6 @@ const IconGroup = ({
             </span> */}
           </>
         </Link>
-      </div>
-      <div className="same-style mobile-off-canvas d-block d-lg-none">
-        <button
-          className="mobile-aside-button"
-          onClick={() => triggerMobileMenu()}
-        >
-          <i className="pe-7s-menu" />
-        </button>
       </div>
     </div>
   );

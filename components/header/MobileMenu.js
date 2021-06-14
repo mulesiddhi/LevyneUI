@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 
+import Close from "../icons/Close";
 import MobileMenuSearch from "./sub-components/MobileNavSearch";
 import MobileNavMenu from "./sub-components/MobileNavMenu";
 import MobileWidgets from "./sub-components/MobileWidgets";
@@ -51,12 +52,13 @@ const MobileMenu = () => {
         id="mobile-menu-close-trigger"
         onClick={() => closeMobileMenu()}
       >
-        <i className="pe-7s-close"></i>
+        {/* <i className="pe-7s-close"></i> */}
+        <Close className='icon-white'/>
       </button>
       <div className="offcanvas-wrapper">
         <div className="offcanvas-inner-content mb-5">
           {/* mobile search */}
-          <MobileMenuSearch />
+          {/* <MobileMenuSearch /> */}
 
           {/* mobile nav menu */}
           <MobileNavMenu />

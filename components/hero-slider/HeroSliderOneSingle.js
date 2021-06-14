@@ -18,8 +18,8 @@ const HeroSliderOneSingle = ({ data, sliderClassName }) => {
         <div className="row text-align-center">
           <div className="">
             <div className="slider-content slider-animated-1">
-            <h1 className="animated">{data.subtitle}</h1>
-              <h3 className="animated">{data.title}</h3>
+            <h1 className="animated p-2">{data.subtitle}</h1>
+              <h3 className="animated pl-2">{data.title}</h3>
               {/* <div className="slider-btn btn-hover">
               </div> */}
             </div>
