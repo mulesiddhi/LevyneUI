@@ -65,12 +65,14 @@
             text-align: left;
             margin-top: 30px;
             margin-bottom: 30px;
+            margin-left: 5px;
         }
         @media #{$sm-layout}{
             padding: 0 0 0;
             text-align: left;
             margin-top: 50px;
             margin-bottom: 50px;
+            margin-left:5px;
         }
         h3{
             font-size: 24px;
@@ -98,11 +100,11 @@
             }
             @media #{$xs-layout}{
                 line-height: 48px;
-                font-size: 33px;
+                font-size: 35px;
                 margin: 6px 0 20px;
             }
             @media #{$sm-layout}{
-                font-size: 30px;
+                font-size: 40px;
                 margin: 6px 0 10px;
             }
         }

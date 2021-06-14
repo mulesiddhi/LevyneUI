@@ -736,7 +736,7 @@
     }
     .same-style.header-search {
         .search-content {
-            background: #ffffff none repeat scroll 0 0;
+            background: blur 0;
             box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
             min-width: 300px;
             padding: 15px;
@@ -744,7 +744,6 @@
             right: 0;
             top: 193%;
             z-index: 99;
-            visibility: hidden;
             opacity: 0;
             transform: rotateX(90deg);
             transform-origin: center top 0;
@@ -764,20 +763,24 @@
             }
             form {
                 position: relative;
+                display: flex;
                 input {
-                    border: 1px solid #d3d3d3;
+                    border-bottom: 1px solid #fff;
                     outline: medium none;
                     padding: 5px 72px 5px 15px;
                     transition: all 0.4s ease 0s;
                     width: 100%;
-                    color: #000;
-                    background: transparent;
+                    color: #fff;
+                    font-weight:600;
+                    background:transparent;
+                    border:none;
+                    input:focus { color:#fff }
                 }
                 .button-search {
                     background: $theme-color;
                     border-color: #ce9634;
                     color: #ffffff;
-                    position: absolute;
+                    position: inline;
                     right: 0;
                     text-transform: uppercase;
                     top: 0;
@@ -1913,7 +1916,7 @@
     height: 100vh;
     z-index: 999999999999;
 
-    transform: translateX(-100%);
+    transform: translateX(-500%);
     padding-right: 60px;
     transition: 0.6s;
 
@@ -4515,4 +4518,20 @@ backdrop-filter: blur(5px);
     color:#fff;
     font-family: 'Mulish';
     font-size:17px;
+}
+.hsearch{
+    .fsearch{
+    .sinput{
+        background:transparent;
+        border: none;
+        border-bottom:1px solid white;
+
+    }
+    .sbtn{
+        background: none;
+        border:none;
+        padding-top:0;
+        padding-bottom:0;
+    }
+}
 }

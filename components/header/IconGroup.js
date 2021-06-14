@@ -63,19 +63,17 @@ const IconGroup = ({
           <Menu className='icon-white'/>
         </button>
       </div>
-      <div className="same-style header-search ">
-        <button className="search-active" onClick={e => handleClick(e)}>
+      <div className="same-style hsearch pr-2 ">
+        {/* <button className="search-active" onClick={e => handleClick(e)}> */}
           {/* <i className="pe-7s-search" /> */}
-          <SvgComponent className='icon-white'/>
-        </button>
-        <div className="search-content">
-          <form action="/search">
-            <input type="text" name="SearchKey" placeholder="Search" />
-            <button type="submit" className="button-search">
-              <i className="pe-7s-search" />
+        {/* </button> */}
+          <form action="/search" className='d-none d-lg-flex fsearch'>
+            <input className='sinput mr-3' type="text" name="SearchKey" placeholder="Search Anything..." />
+            <button type="submit" className="sbtn">
+            <SvgComponent className='icon-white'/>
             </button>
           </form>
-        </div>
+          <SvgComponent className='icon-white d-lg-none d-block'/>
       </div>
       {!isLogged
         ?
