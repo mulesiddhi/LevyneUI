@@ -51,16 +51,7 @@ const FooterOne = ({
       >
         <div className={`${containerClass ? containerClass : "container"}`}>
           <div className="row">
-            <div
-              className={`${sideMenu ? "col-xl-2 col-sm-4" : "col-lg-2 col-sm-4"
-                }`}
-            >
-              {/* footer copyright */}
-              {/* <FooterCopyright
-                footerLogo="/assets/img/logo/logo.png"
-                spaceBottomClass="mb-30"
-              /> */}
-            </div>
+            
             {/* <div className={`${sideMenu ? "col-xl-2 col-sm-4" : "col-lg-2 col-sm-4"}`} id="DownloadDiv">
               <div className="footer-widget mb-30 ml-30">
                 <div className="footer-title">

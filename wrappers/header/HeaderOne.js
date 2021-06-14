@@ -37,8 +37,8 @@ const HeaderOne = ({
 
 	return (
 		<header className={`header-area clearfix ${headerBgClass ? headerBgClass : ""}`}>
-			<div className={`${headerPaddingClass ? headerPaddingClass : ""} sticky-bar stick header-res-padding clearfix `}>
-				<div className={scrollState==="top" ?'navbarblur':'acnavbar'}>
+			<div className={`${headerPaddingClass ? headerPaddingClass : ""} sticky-bar stick header-res-padding clearfix ${scrollState==="top" ?'navbarblur':'acnavbar'} `}>
+				{/* <div className={`${scrollState==="top" ?'navbarblur':'acnavbar'} `}> */}
 				<div className={layout === "container-fluid" ? layout : "container"}>
 					<div className="row">
 						<div className="col-xl-3 col-lg-3 d-none d-lg-block">
@@ -54,7 +54,7 @@ const HeaderOne = ({
 				{/* mobile menu */}
 				<MobileMenu />
 			</div>
-			</div>
+			{/* </div> */}
 		</header>
 	);
 };
